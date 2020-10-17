@@ -3,8 +3,24 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavigationBar} from "./NavigationBar";
 import {Card} from "react-bootstrap";
+import axios from "axios";
+import {properties} from "./properties";
 
 class App extends React.Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: ''
+        }
+    }
+
+    componentDidMount() {
+        axios.get(`${properties.apiUrl}/api/contacts`)
+            .then(json => this.setState({email: json.data.email}))
+            .catch(error => console.log(error));
+    }
+
     render() {
         return (
             <div className="App">
@@ -17,7 +33,7 @@ class App extends React.Component{
                         <Card.Body>
                             <Card.Text>
                                 <h3>Welcome to valadzkokseniya.com!</h3>
-                                <h5>For contact use <a href='/email'>valadzkokseniya@gmail.com</a></h5>
+                                <h5>For contact use <a href='/email'>{this.state.email}</a></h5>
                             </Card.Text>
                         </Card.Body>
                     </Card>
