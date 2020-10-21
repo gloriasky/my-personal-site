@@ -1,25 +1,15 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  overflow-x: hidden;
 }
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,11 +18,108 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-background {
+  position: relative;
+  max-width: 100vw;
+  margin-top: 70px;
+}
+
+.app-contacts {
+  position: absolute;
+  left: 825px;
+  top: 242px;
+}
+
+.app-contacts-label {
+  position: absolute;
+  left: 824px;
+  top: 191px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.app-background-gradient {
+  position: absolute;
+  width: 100vw;
+  left: calc(50% - 1545px/2 - 0.5px);
+  top: 0;
+  bottom: 29.72%;
+
+  background: linear-gradient(179.87deg, #000000 0.11%, rgba(0, 0, 0, 0.536458) 46.36%, rgba(0, 0, 0, 0) 99.89%);
+  backdrop-filter: blur(4px);
+}
+
+.app-welcome-label {
+  position: absolute;
+  left: calc(50% - 368px/2 + 138px);
+  top: 16px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.app-main-picture{
+  position: absolute;
+  width: 225px;
+  height: 304px;
+  left: 294px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-image: url(/images/FB7c78WCIsI.jpg);
+}
+
+.app-mail {
+  width: 36px;
+  height: 36px;
+  left: 805px;
+  top: 242px;
+
+  background: url(/images/email.png);
+}
+
+.app-facebook {
+  margin-left: 23px;
+  width: 36px;
+  height: 36px;
+  left: 864px;
+  top: 242px;
+
+  background: url(/images/facebook.png);
+}
+
+.app-linkedin {
+  margin-left: 23px;
+  width: 36px;
+  height: 36px;
+  left: 925px;
+  top: 242px;
+
+  background: url(/images/linkedin.png);
+}
+
+.app-github {
+  margin-left: 23px;
+  width: 36px;
+  height: 36px;
+  left: 986px;
+  top: 242px;
+
+  background: url(/images/github.png);
 }

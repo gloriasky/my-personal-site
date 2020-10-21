@@ -2,42 +2,67 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavigationBar} from "./NavigationBar";
-import {Card} from "react-bootstrap";
 import axios from "axios";
 import {properties} from "./properties";
+
+class ContactLink extends React.Component {
+
+    render() {
+
+        let link = this.props.link;
+
+        return (
+            <a className={`app-${link.className}`}
+               href={link.link}
+               key={this.props.key}
+               target="_blank"
+               aria-hidden="true"
+               rel="noopener noreferrer">{null}</a>
+        );
+    }
+
+}
 
 class App extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            email: ''
+            links: []
         }
     }
 
     componentDidMount() {
-        axios.get(`${properties.apiUrl}/api/contacts`)
-            .then(json => this.setState({email: json.data.email}))
+        axios.get(`${properties.apiUrl}/api/contact-links`)
+            .then(json => this.setState({links: json.data}))
             .catch(error => console.log(error));
     }
 
     render() {
+
+        let links = this.state.links.map((link, ind) => <ContactLink link={link} key={ind}/>);
+
         return (
             <div className="App">
-                <NavigationBar />
-                <header className="App-header">
-                    <Card bg='secondary'>
-                        <div className="justify-content-center">
-                        <Card.Img  style={{width:180, padding:10}} variant="top" src="https://sun9-57.userapi.com/KN3wL4K36o9GyzQkL3k_P8G3BgZheCoLLWHQoQ/FB7c78WCIsI.jpg" />
+                <div className="App-header">
+                    <NavigationBar />
+                    <div className="app-background">
+                        <div className="app-background-gradient">
+                            <div className="app-welcome-label">
+                                Welcome to my personal website
+                            </div>
+                            <div className="app-main-picture">
+
+                            </div>
+                            <div className="app-contacts-label">
+                                For contact use:
+                            </div>
+                            <div className="app-contacts row">
+                                {links}
+                            </div>
                         </div>
-                        <Card.Body>
-                            <Card.Text>
-                                <h3>Welcome to valadzkokseniya.com!</h3>
-                                <h5>For contact use <a href='/email'>{this.state.email}</a></h5>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </header>
+                    </div>
+                </div>
             </div>
         );
     }
