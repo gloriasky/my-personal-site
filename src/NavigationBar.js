@@ -7,8 +7,8 @@ export class NavigationBar extends React.Component {
 
     render() {
         return (
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Welcome</Navbar.Brand>
+                <Navbar bg="dark" fixed="top" variant="dark">
+                    <Navbar.Brand href="#home">Home</Navbar.Brand>
                 </Navbar>
         );
     }
