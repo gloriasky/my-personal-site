@@ -1,0 +1,42 @@
+.app-facebook {
+    margin-left: 23px;
+    width: 36px;
+    height: 36px;
+
+    background: url(/images/facebook.png);
+}
+
+.app-linkedin {
+    margin-left: 23px;
+    width: 36px;
+    height: 36px;
+
+    background: url(/images/linkedin.png);
+}
+
+.app-github {
+    margin-left: 23px;
+    width: 36px;
+    height: 36px;
+
+    background: url(/images/github.png);
+}
+
+.app-mail {
+    width: 36px;
+    height: 36px;
+    left: 805px;
+    top: 242px;
+
+    background: url(/images/email.png);
+}
+
+
+.app-footer {
+    font-family: Gloria Hallelujah;
+    height: 50px;
+    width: 100vw;
+    border-bottom: 50px solid black;
+    border-left: 22.5vw solid transparent;
+    border-right: 22.5vw solid transparent;
+}

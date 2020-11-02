@@ -18,17 +18,7 @@
   color: #61dafb;
 }
 
-.app-background {
-  position: relative;
-  max-width: 100vw;
-  margin-top: 70px;
-}
 
-.app-contacts {
-  position: absolute;
-  left: 825px;
-  top: 242px;
-}
 
 .app-contacts-label {
   position: absolute;
@@ -46,80 +36,40 @@
 }
 
 .app-background-gradient {
-  position: absolute;
-  width: 100vw;
-  left: calc(50% - 1545px/2 - 0.5px);
-  top: 0;
-  bottom: 29.72%;
+  min-width: 100vw;
+  height: calc(100vh - 50px - 50px);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 
-  background: linear-gradient(179.87deg, #000000 0.11%, rgba(0, 0, 0, 0.536458) 46.36%, rgba(0, 0, 0, 0) 99.89%);
-  backdrop-filter: blur(4px);
+  background-image: url(/images/background.jpg);
 }
 
 .app-welcome-label {
-  position: absolute;
-  left: calc(50% - 368px/2 + 138px);
-  top: 16px;
-
+  font-family: Gloria Hallelujah;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 30px;
-
+  font-size: 65px;
+  line-height: 129px;
+  /*display: flex;*/
+  align-items: center;
   text-align: center;
 
   color: #FFFFFF;
-
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .app-main-picture{
-  position: absolute;
-  width: 225px;
-  height: 304px;
-  left: 294px;
-  top: 0;
+  width: auto;
+  height: 50vh;
+  align-items: center;
+  text-align: center;
   background-size: contain;
+  background-position: center;
+  border-radius: 50px;
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-image: url(/images/FB7c78WCIsI.jpg);
+  background-image: url(/images/main.jpg);
 }
 
-.app-mail {
-  width: 36px;
-  height: 36px;
-  left: 805px;
-  top: 242px;
 
-  background: url(/images/email.png);
-}
-
-.app-facebook {
-  margin-left: 23px;
-  width: 36px;
-  height: 36px;
-  left: 864px;
-  top: 242px;
-
-  background: url(/images/facebook.png);
-}
-
-.app-linkedin {
-  margin-left: 23px;
-  width: 36px;
-  height: 36px;
-  left: 925px;
-  top: 242px;
-
-  background: url(/images/linkedin.png);
-}
-
-.app-github {
-  margin-left: 23px;
-  width: 36px;
-  height: 36px;
-  left: 986px;
-  top: 242px;
-
-  background: url(/images/github.png);
-}

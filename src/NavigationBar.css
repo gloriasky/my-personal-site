@@ -1,0 +1,25 @@
+.gl-nav-link {
+    font-family: Gloria Hallelujah;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 71px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    color: #FFFFFF;
+}
+
+.navigation-bar {
+    width: 100vw;
+    height: 50px;
+    left: 0;
+    top: 0;
+
+    background: #000000;
+}
+
+.cv-link {
+    float: right;
+}
