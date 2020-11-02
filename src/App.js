@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavigationBar} from "./NavigationBar";
-import axios from "axios";
-import {properties} from "./properties";
 import {Footer} from "./Footer";
 
 
