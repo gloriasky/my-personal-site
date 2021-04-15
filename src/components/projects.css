@@ -1,0 +1,11 @@
+.projects-background {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-attachment: scroll;
+
+    background-image: url(/images/pr-background.jpg);
+}

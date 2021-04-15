@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /*font-size: calc(10px + 2vmin);*/
+  /*color: white;*/
 }
 
 .App-link {
@@ -36,12 +36,13 @@
 }
 
 .app-background-gradient {
-  min-width: 100vw;
-  height: calc(100vh - 50px - 50px);
-  background-size: contain;
-  background-position: center;
+  height: calc(100vh - 50px);
+  width: 100%;
+  background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
   background-origin: content-box;
+  background-attachment: scroll;
 
   background-image: url(/images/background.jpg);
 }
@@ -56,7 +57,7 @@
   align-items: center;
   text-align: center;
 
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .app-main-picture{

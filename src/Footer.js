@@ -1,6 +1,6 @@
 import * as React from "react";
 import './Footer.css'
-import axios from "axios";
+import axiosConfig from "./apis/axiosConfig";
 import {properties} from "./properties";
 
 class ContactLink extends React.Component {
@@ -32,7 +32,7 @@ export class Footer extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`${properties.apiUrl}/api/contact-links`)
+        axiosConfig.get(`/contact-links`)
             .then(json => this.setState({links: json.data}))
             .catch(error => console.log(error));
     }
@@ -41,7 +41,7 @@ export class Footer extends React.Component {
         let links = this.state.links.map((link, ind) => <ContactLink link={link} key={ind}/>);
 
         return (
-            <div className="app-footer text-center row">
+            <div className="app-footer text-center row fixed-bottom">
                 <div style={{marginLeft: '15vw'}}> For contact use: </div>
                 <div style={{marginLeft: 25}} className="app-contacts row">
                     {links}

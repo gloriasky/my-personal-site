@@ -25,9 +25,9 @@ class App extends React.Component{
                         <div className="app-welcome-label">
                             Online Portfolio
                         </div>
-
+                        <Footer  />
                     </div>
-                    <Footer />
+
                 </div>
 
             </div>

@@ -36,6 +36,8 @@
     font-family: Gloria Hallelujah;
     height: 50px;
     width: 100vw;
+    font-size: 1.75em;
+    color: white;
     border-bottom: 50px solid black;
     border-left: 22.5vw solid transparent;
     border-right: 22.5vw solid transparent;
